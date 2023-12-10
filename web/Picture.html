@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* 定位图片容器（需要定位左右箭头）*/
+.container {
+  position: relative;
+}
+
+/* 默认隐藏图片 */
+.mySlides {
+  display: none;
+}
+
+/* 将鼠标悬停在缩略图上时添加指针 */
+.cursor {
+  cursor: pointer;
+}
+
+/* 下一个 & 上一个按钮 */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 将“下一步按钮”放在右边 */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* 在鼠标悬停时，添加一个有点透明的黑色背景色 */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 数字文本（1/3 等）*/
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* 图像文本容器 */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 六列并排 */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* 为缩略图添加透明效果 */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li><a href="..\web/Home.html">这是谁？</a></li>
+  <li><a class="active" href="..\web/Picture.html">她好好看呜呜呜</a></li>
+  <li><a href="..\web/Share.html">去听去听！</a></li>
+  <li><a href="..\web/Secert.html">这里没有彩蛋</a></li>
+  <li class="right"><a href="https://cshsgithub.github.io/209.github.io/
+    ">209</a></li>
+  <li class="right"><a href="..\index.html">回到首页</a></li>
+</ul>
+
+<h2 style="text-align:center">缪の瞬间</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="..\image/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="..\image/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="..\image/3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="..\image/4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="..\image/5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="..\image/6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="..\image/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="shining star">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="..\image/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="人群中">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="..\image/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="她在丛中笑">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="..\image/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="烂漫">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="..\image/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="追着光">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="..\image/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="生命">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+
+</body>
